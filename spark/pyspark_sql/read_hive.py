@@ -13,6 +13,7 @@ def main():
         .builder \
         .appName("Spark on Hive") \
         .master("local[*]") \
+        .config("spark.sql.warehouse.dir", warehouse_location) \
         .enableHiveSupport() \
         .getOrCreate()
 
