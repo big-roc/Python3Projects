@@ -3,8 +3,8 @@ import os
 import sys
 import importlib
 
-from pyhive.common_func import execute_hql
-from pyhive.time_utils import yesterday
+from hive.common_func import execute_hql
+from hive.time_utils import yesterday
 
 importlib.reload(sys)
 
@@ -25,8 +25,7 @@ def add_partition(table, date):
 
 def copy_hdfs_data(table, date):
     cp_command = 'hadoop fs -cp /user/log/kangaroos/' + table + '/' + date + '/* /user/hive/warehouse/fin_loan.db/' + table + '/data_date=' + date
-    print
-    '命令执行返回码: ', os.system(cp_command)
+    print('命令执行返回码: ', os.system(cp_command))
 
 
 def main():

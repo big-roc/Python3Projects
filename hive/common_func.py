@@ -11,7 +11,7 @@ import os
 import requests
 from time import ctime
 
-importlib.reload(sys)  # python2的写法:reload(sys) sys.setdefaultencoding("utf-8")
+importlib.reload(sys)
 
 __all__ = ["execute_hql", "find_abnormal", "send_alert"]
 

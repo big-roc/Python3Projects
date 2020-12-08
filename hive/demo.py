@@ -1,8 +1,8 @@
 # coding=utf-8
 import sys
 import importlib
-from pyhive.common_func import execute_hql
-from pyhive.time_utils import last_n2m_day
+from hive.common_func import execute_hql
+from hive.time_utils import last_n2m_day
 from multiprocessing import Pool
 
 importlib.reload(sys)
@@ -61,5 +61,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # python2.7 demo.py > demo.log 2>&1 &
+    # python2.7 read_hive.py > demo.log 2>&1 &
     main()
